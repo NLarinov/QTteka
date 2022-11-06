@@ -1,4 +1,5 @@
-from PyQt5.QtWidgets import QMainWindow, QPushButton
+import sys
+from PyQt5.QtWidgets import QMainWindow, QPushButton, QApplication
 
 
 class Aloitus(QMainWindow):
@@ -8,7 +9,6 @@ class Aloitus(QMainWindow):
         self.button.move(200, 200)
         self.button.clicked.connect(self.continue2)
         self.setGeometry(600, 200, 500, 300)
-        self.show()
 
     def continue2(self):
         self.close()
@@ -35,3 +35,10 @@ class Second(QMainWindow):
     def ok(self):
         print('close clicked')
         self.close()
+
+
+if __name__ == '__main__':
+    app = QApplication(sys.argv)
+    ex = Aloitus()
+    ex.show()
+    sys.exit(app.exec())
