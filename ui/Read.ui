@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1090</width>
-    <height>920</height>
+    <width>1050</width>
+    <height>710</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,7 +17,7 @@
    <property name="geometry">
     <rect>
      <x>350</x>
-     <y>40</y>
+     <y>20</y>
      <width>361</width>
      <height>31</height>
     </rect>
@@ -40,10 +40,10 @@
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>110</y>
+     <x>20</x>
+     <y>90</y>
      <width>1011</width>
-     <height>771</height>
+     <height>601</height>
     </rect>
    </property>
    <property name="font">
@@ -52,7 +52,33 @@
     </font>
    </property>
    <property name="text">
-    <string/>
+    <string>Добро пожаловать в Qt-теку!
+
+Смысл “qt-теки” в том, чтобы помочь вам подобрать фильм или сериал под
+настроение и сделать процесс выбора максимально удобным.
+На каждой странице приложения наверху расположены две кнопки (Watch later list и Main window)
+
+Watch later list представляет собой список фильмов, которые вы отметили для себя.
+На этой странице можно редактировать этот список или ставить себе напоминание о просмотре на дату.
+
+На основной странице (Main Window) находятся подборки для вас: ... ,
+а также подробная инструкция пользования.
+
+Когда вы запускаете подборку, перед вами появляется интерактивная книга,
+где страницы - информация о фильме с картинкой.
+На любой странице вы можете отметить фильм как нежелаемый или добавить его в список избранных фильмов.
+
+Qt-тека поддерживает взаимодействие с клавиатурой. Список комманд:
+	w - Watch later list
+	m - Main Window
+	i - Instruction
+	...
+	Режим подборки:
+		Left Arrow - вернуться к предыдущему фильму
+		Right Arrow - следующий фильм
+		Up Arrow - удалить фильм из qt-теки (нежелательный)
+		Down Arrow - добавить фильм в Watch later list
+</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
