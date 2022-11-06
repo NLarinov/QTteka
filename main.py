@@ -6,6 +6,7 @@ from PyQt5 import uic
 class Mainwindow(QMainWindow):
     def __init__(self):
         super().__init__()
+        self.name1 = None
         uic.loadUi('ui/Mainwindow.ui', self)
         self.pushButton_2.clicked.connect(self.plain1)
         self.show()
@@ -18,6 +19,7 @@ class Mainwindow(QMainWindow):
 class Watchlaterlist(QMainWindow):
     def __init__(self):
         super().__init__()
+        self.name2 = None
         uic.loadUi('ui/Watchlaterlist.ui', self)
         self.pushButton_3.clicked.connect(self.plain2)
         self.show()

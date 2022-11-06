@@ -49,6 +49,7 @@ class Ui_Form(object):
         self.pushButton_2.setObjectName("pushButton_2")
         self.label = QtWidgets.QLabel(Form)
         self.label.setGeometry(QtCore.QRect(430, 40, 251, 31))
+        self.label.se
         font = QtGui.QFont()
         font.setFamily("Times New Roman")
         font.setPointSize(26)
