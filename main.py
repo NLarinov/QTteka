@@ -1,44 +1,33 @@
 import sys
 from PyQt5.QtWidgets import QMainWindow, QPushButton, QApplication
+from PyQt5 import uic
 
 
-class Aloitus(QMainWindow):
+class Mainwindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.button = QPushButton("Ok", self)
-        self.button.move(200, 200)
-        self.button.clicked.connect(self.continue2)
-        self.setGeometry(600, 200, 500, 300)
-
-    def continue2(self):
-        self.close()
-        _ = Second()
-
-
-class Second(QMainWindow):
-    def __init__(self):
-        super().__init__()
-        self.title = "Alkutiedot"
-        self.top = 600
-        self.left = 200
-        self.width = 500
-        self.height = 500
-
-        self.button = QPushButton("Ok", self)
-        self.button.move(100, 400)
-        self.button.clicked.connect(self.ok)
-
-        self.setWindowTitle(self.title)
-        self.setGeometry(self.top, self.left, self.width, self.height)
+        uic.loadUi('ui/Mainwindow.ui', self)
+        self.pushButton_2.clicked.connect(self.plain1)
         self.show()
 
-    def ok(self):
-        print('close clicked')
+    def plain1(self):
         self.close()
+        self.name1 = Watchlaterlist()
+
+
+class Watchlaterlist(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        uic.loadUi('ui/Watchlaterlist.ui', self)
+        self.pushButton_3.clicked.connect(self.plain2)
+        self.show()
+
+    def plain2(self):
+        self.close()
+        self.name2 = Mainwindow()
 
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
-    ex = Aloitus()
-    ex.show()
+    ex = Mainwindow()
     sys.exit(app.exec())
