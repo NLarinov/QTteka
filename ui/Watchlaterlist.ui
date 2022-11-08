@@ -218,7 +218,7 @@
     </font>
    </property>
    <property name="text">
-    <string>Make favorite</string>
+    <string>Mark</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_8">
