@@ -21,6 +21,7 @@ class Ui_Form(object):
         sizePolicy.setHeightForWidth(Form.sizePolicy().hasHeightForWidth())
         Form.setSizePolicy(sizePolicy)
         self.listWidget = QtWidgets.QListWidget(Form)
+        self.listWidget.currentItem().text()
         self.listWidget.setGeometry(QtCore.QRect(20, 120, 1051, 651))
         self.listWidget.setObjectName("listWidget")
         self.calendarWidget = QtWidgets.QCalendarWidget(Form)
@@ -103,4 +104,5 @@ class Ui_Form(object):
         self.label.setText(_translate("Form", "Watch Later List"))
         self.pushButton_4.setText(_translate("Form", "DELETE"))
         self.pushButton_5.setText(_translate("Form", "ACCEPT"))
+        self.pushButton_2.setEnabled()
         self.pushButton_6.setText(_translate("Form", "CHOOSE DATE"))

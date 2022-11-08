@@ -41,9 +41,9 @@
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>90</y>
+     <y>120</y>
      <width>1011</width>
-     <height>601</height>
+     <height>501</height>
     </rect>
    </property>
    <property name="font">
@@ -68,16 +68,11 @@ Watch later list представляет собой список фильмов
 где страницы - информация о фильме с картинкой.
 На любой странице вы можете отметить фильм как нежелаемый или добавить его в список избранных фильмов.
 
-Qt-тека поддерживает взаимодействие с клавиатурой. Список комманд:
-	w - Watch later list
-	m - Main Window
-	i - Instruction
-	...
-	Режим подборки:
-		Left Arrow - вернуться к предыдущему фильму
-		Right Arrow - следующий фильм
-		Up Arrow - удалить фильм из qt-теки (нежелательный)
-		Down Arrow - добавить фильм в Watch later list
+Qt-тека поддерживает взаимодействие с клавиатурой. Список комманд в режиме подборки:
+    Left Arrow - вернуться к предыдущему фильму
+    Right Arrow - следующий фильм
+    Up Arrow - удалить фильм из qt-теки (нежелательный)
+    Down Arrow - добавить фильм в Watch later list
 </string>
    </property>
    <property name="alignment">

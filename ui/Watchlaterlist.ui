@@ -2,6 +2,9 @@
 <ui version="4.0">
  <class>Form</class>
  <widget class="QWidget" name="Form">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -24,22 +27,33 @@
     <rect>
      <x>20</x>
      <y>120</y>
-     <width>1051</width>
+     <width>601</width>
      <height>651</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Lucida Bright</family>
+     <pointsize>18</pointsize>
+    </font>
    </property>
   </widget>
   <widget class="QCalendarWidget" name="calendarWidget">
    <property name="enabled">
-    <bool>true</bool>
+    <bool>false</bool>
    </property>
    <property name="geometry">
     <rect>
-     <x>690</x>
+     <x>660</x>
      <y>240</y>
-     <width>341</width>
-     <height>381</height>
+     <width>391</width>
+     <height>431</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>8</pointsize>
+    </font>
    </property>
    <property name="mouseTracking">
     <bool>false</bool>
@@ -185,6 +199,72 @@
     <string>CHOOSE DATE</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="pushButton_7">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>650</x>
+     <y>140</y>
+     <width>131</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Lucida Bright</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Make favorite</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_8">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>650</x>
+     <y>200</y>
+     <width>131</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Lucida Bright</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Move up</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_9">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>650</x>
+     <y>260</y>
+     <width>131</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Lucida Bright</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Move down</string>
+   </property>
+  </widget>
   <zorder>calendarWidget</zorder>
   <zorder>listWidget</zorder>
   <zorder>pushButton_3</zorder>
@@ -193,6 +273,9 @@
   <zorder>pushButton_4</zorder>
   <zorder>pushButton_5</zorder>
   <zorder>pushButton_6</zorder>
+  <zorder>pushButton_7</zorder>
+  <zorder>pushButton_8</zorder>
+  <zorder>pushButton_9</zorder>
  </widget>
  <resources/>
  <connections/>
