@@ -8,6 +8,7 @@ import sqlite3
 class Mainwindow(QMainWindow):
     def __init__(self):
         super().__init__()
+        self.error = None
         self.name4 = None
         self.con = sqlite3.connect('static/Films.db')
         self.cur = self.con.cursor()
@@ -21,19 +22,30 @@ class Mainwindow(QMainWindow):
         self.pushButton.clicked.connect(self.instructions)
 
         a = date.today()
-        self.cur.execute("""UPDATE Watchlater SET date=NULL WHERE date<?""", (a,)).fetchall()
-        line = self.cur.execute("""SELECT name FROM Watchlater WHERE date=?""", (a,)).fetchall()
-        if line:
-            self.error = QMessageBox()
-            self.error.setWindowTitle("notification")
-            self.error.setText(f'your set films for today: {line[0]}')
-            self.error.setIcon(QMessageBox.Warning)
-            self.error.setStandardButtons(QMessageBox.Ok)
-            self.error.show()
-        self.con.commit()
-        self.con.close()
+        try:
+            self.cur.execute("""UPDATE Watchlater SET date=NULL WHERE date<?""", (a,)).fetchall()
+            line = self.cur.execute("""SELECT name FROM Watchlater WHERE date=?""", (a,)).fetchall()
+            if line:
+                self.notif = QMessageBox()
+                self.notif.setWindowTitle("notification")
+                self.notif.setText(f'your set films for today: {line[0]}')
+                self.notif.setIcon(QMessageBox.Warning)
+                self.notif.setStandardButtons(QMessageBox.Ok)
+                self.notif.show()
+            self.con.commit()
+            self.con.close()
+        except Exception as e:
+            print(e)
 
         self.show()
+
+    def some_error(self, error):
+        self.error = QMessageBox()
+        self.error.setWindowTitle("Error")
+        self.error.setText(error)
+        self.error.setIcon(QMessageBox.Warning)
+        self.error.setStandardButtons(QMessageBox.Ok)
+        self.error.show()
 
     def plain1(self):
         self.close()
@@ -50,29 +62,40 @@ class Mainwindow(QMainWindow):
 class Watchlaterlist(QMainWindow):
     def __init__(self):
         super().__init__()
+        self.error = None
         self.con = sqlite3.connect('static/Films.db')
         self.cur = self.con.cursor()
 
         self.name2 = None
         uic.loadUi('ui/Watchlaterlist.ui', self)
 
-        self.solve()
+        try:
+            self.solve()
 
-        self.pushButton_3.clicked.connect(self.plain2)
-        self.pushButton_4.clicked.connect(self.removing)
-        self.pushButton_5.clicked.connect(self.accept)
-        self.pushButton_7.clicked.connect(self.color)
-        self.pushButton_6.clicked.connect(self.data)
-        self.pushButton_8.clicked.connect(self.uncolor)
-        self.listWidget.itemSelectionChanged.connect(self.enable)
-        self.calendarWidget.clicked['QDate'].connect(self.date_track)
+            self.pushButton_3.clicked.connect(self.plain2)
+            self.pushButton_4.clicked.connect(self.removing)
+            self.pushButton_5.clicked.connect(self.accept)
+            self.pushButton_7.clicked.connect(self.color)
+            self.pushButton_6.clicked.connect(self.data)
+            self.pushButton_8.clicked.connect(self.uncolor)
+            self.listWidget.itemSelectionChanged.connect(self.enable)
+            self.calendarWidget.clicked['QDate'].connect(self.date_track)
+        except Exception as e:
+            print(e)
 
         self.calendarWidget.hide()
         self.show()
 
+    def some_error(self, error):
+        self.error = QMessageBox()
+        self.error.setWindowTitle("Error")
+        self.error.setText(error)
+        self.error.setIcon(QMessageBox.Warning)
+        self.error.setStandardButtons(QMessageBox.Ok)
+        self.error.show()
+
     def uncolor(self):
         a = eval(self.listWidget.currentItem().text())[0]
-
         self.cur.execute("""UPDATE Watchlater SET color=NULL WHERE name=?""", (a,)).fetchall()
 
         self.listWidget.clear()
