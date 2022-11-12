@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Form</class>
- <widget class="QWidget" name="Form">
+ <class>Read</class>
+ <widget class="QWidget" name="Read">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
     <width>1050</width>
-    <height>744</height>
+    <height>750</height>
    </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
   </property>
   <property name="windowTitle">
    <string>Form</string>
@@ -43,7 +49,7 @@
      <x>20</x>
      <y>120</y>
      <width>1011</width>
-     <height>551</height>
+     <height>581</height>
     </rect>
    </property>
    <property name="font">
@@ -74,7 +80,9 @@ Qt-тека поддерживает взаимодействие с клави�
     W - удалить фильм из текущей подборки (нежелательный)
     S - добавить фильм в Watch later list
 
-ПРИМЕЧАНИЕ: Дорогой пользователь, переключи раскладку на английскую!!!</string>
+ПРИМЕЧАНИЕ: Дорогой пользователь, переключи раскладку на английскую!!!
+                                                                                                                        creator: Tkachev Nikolay
+                                                                                                                        github: NLarinov(QTteka)</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>

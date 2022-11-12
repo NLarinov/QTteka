@@ -10,6 +10,7 @@ import sqlite3
 class Mainwindow(QMainWindow):
     def __init__(self):
         super().__init__()
+
         self.error = None
         self.name = None
 
@@ -17,6 +18,7 @@ class Mainwindow(QMainWindow):
         self.cur = self.con.cursor()
 
         uic.loadUi('ui/Mainwindow.ui', self)
+        self.setWindowTitle('Mainwindow')
 
         self.pushButton_2.clicked.connect(self.plain)
         self.pushButton.clicked.connect(self.instructions)
@@ -72,11 +74,13 @@ class Mainwindow(QMainWindow):
 class Watchlaterlist(QMainWindow):
     def __init__(self):
         super().__init__()
+
         self.error = None
         self.con = sqlite3.connect('static/Films.db')
         self.cur = self.con.cursor()
         self.name = None
         uic.loadUi('ui/Watchlaterlist.ui', self)
+        self.setWindowTitle('Watchlaterlist')
 
         try:
             self.solve()
@@ -192,6 +196,7 @@ class Read(QMainWindow):
     def __init__(self):
         super().__init__()
         uic.loadUi('ui/Read.ui', self)
+        self.setWindowTitle('Read')
         self.show()
 
 
@@ -202,6 +207,8 @@ class Podborka(QMainWindow):
         self.n = 0
 
         uic.loadUi('ui/Podborka.ui', self)
+        self.setWindowTitle('Podborka')
+
         self.con = sqlite3.connect('static/Films.db')
         self.cur = self.con.cursor()
 
