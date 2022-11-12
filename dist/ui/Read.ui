@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Read</class>
+ <widget class="QWidget" name="Read">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1050</width>
+    <height>750</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>20</y>
+     <width>361</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>26</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+     <underline>false</underline>
+     <strikeout>false</strikeout>
+    </font>
+   </property>
+   <property name="text">
+    <string>Welcome to the QT-тека!</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>120</y>
+     <width>1011</width>
+     <height>581</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Добро пожаловать в Qt-теку!
+
+Смысл “qt-теки” в том, чтобы помочь вам подобрать фильм или сериал под
+настроение и сделать процесс выбора максимально удобным.
+На каждой странице приложения наверху расположены две кнопки (Watch later list и Main window)
+
+Watch later list представляет собой список фильмов, которые вы отметили для себя.
+На этой странице можно редактировать этот список или ставить себе напоминание о просмотре на дату.
+
+На основной странице (Main Window) находятся подборки для вас: ... ,
+а также подробная инструкция пользования.
+
+Когда вы запускаете подборку, перед вами появляется интерактивная книга,
+где страницы - информация о фильме с картинкой.
+На любой странице вы можете отметить фильм как нежелаемый или добавить его в список избранных фильмов.
+
+Qt-тека поддерживает взаимодействие с клавиатурой. Список комманд в режиме подборки:
+    A - вернуться к предыдущему фильму
+    D - следующий фильм
+    W - удалить фильм из текущей подборки (нежелательный)
+    S - добавить фильм в Watch later list
+
+ПРИМЕЧАНИЕ: Дорогой пользователь, переключи раскладку на английскую!!!
+                                                                                                                        creator: Tkachev Nikolay
+                                                                                                                        github: NLarinov(QTteka)</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
