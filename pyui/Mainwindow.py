@@ -55,6 +55,7 @@ class Ui_Form(object):
         self.label.setObjectName("label")
         self.label_2 = QtWidgets.QLabel(Form)
         self.label_2.setGeometry(QtCore.QRect(10, 880, 241, 31))
+        self.label_2.setPixmap()
         font = QtGui.QFont()
         font.setFamily("Times New Roman")
         font.setPointSize(22)

@@ -19,6 +19,7 @@ class Mainwindow(QMainWindow):
 
         uic.loadUi('ui/Mainwindow.ui', self)
         self.setWindowTitle('Mainwindow')
+        self.label_4.setPixmap(QPixmap(f'static/images/main.png'))
 
         self.pushButton_2.clicked.connect(self.plain)
         self.pushButton.clicked.connect(self.instructions)
